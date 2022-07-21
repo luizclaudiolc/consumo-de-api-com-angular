@@ -1,0 +1,20 @@
+.container-grid-users {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-bar {
+    background: rgb(174, 195, 238);
+    background: radial-gradient(circle, rgba(174, 195, 238, 1) 33%, rgba(93, 28, 191, 1) 100%);
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,50 @@
+  <mat-card class="card-person">
+    <mat-toolbar class="header-card">
+      <img *ngIf="foto; else noAvatar" matListAvatar src="{{ foto }}" alt="{{ nome }}" class="avatar" />
+  
+      <mat-card-title class="card-title">
+        {{ nome }} {{ sobrenome }}
+      </mat-card-title>
+    </mat-toolbar>
+    <mat-card-content class="card-content">
+      <mat-list>
+        <mat-list-item>
+          <mat-icon>person</mat-icon>
+          <span>{{ idade }} anos</span>
+        </mat-list-item>
+  
+        <mat-list-item>
+          <mat-icon>location_on</mat-icon>
+          <span>{{ cidade }}, {{ estado }}, {{ pais }}</span>
+        </mat-list-item>
+  
+        <mat-list-item>
+          <mat-icon>email</mat-icon>
+          <span>{{ email }}</span>
+        </mat-list-item>
+  
+        <mat-list-item>
+          <mat-icon>phone</mat-icon>
+          <span>{{ telefone }}</span>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  
+    <!-- <mat-card-actions>
+          <button mat-raised-button color="primary">
+              <mat-icon>edit</mat-icon>
+              <span>Editar</span>
+          </button>
+          <button mat-raised-button color="warning">
+              <mat-icon>delete</mat-icon>
+              <span>Deletar</span>
+          </button>
+      </mat-card-actions> -->
+  
+    <ng-template #noAvatar>
+      <mat-icon>person</mat-icon>
+      <span>
+        {{ nome?.charAt(0) }}
+      </span>
+    </ng-template>
+  </mat-card>

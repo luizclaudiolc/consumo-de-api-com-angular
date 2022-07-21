@@ -1,0 +1,31 @@
+<mat-toolbar class="nav-bar" clas="mat-elevation-z6">
+  <h3>
+    <span>
+      <span>
+        Consumo de API com Angular
+      </span>
+    </span>
+  </h3>
+</mat-toolbar>
+<div class="container-grid-users">
+  <ng-container *ngFor="let item of userData; let i = index">
+    <app-card
+    [foto]="item.foto"
+    [nome]="item.nome"
+    [sobrenome]="item.sobrenome"
+    [idade]="item.idade"
+    [cidade]="item.cidade"
+    [estado]="item.estado"
+    [pais]="item.pais"
+    [telefone]="item.telefone"
+    [email]="item.email"
+    ></app-card>
+  </ng-container>
+<div>
+
+  <!-- <div class="btn-see-more">
+    <button mat-raised-button color="primary" (click)="seeMore()">
+      <mat-icon>add</mat-icon>
+      <span>Ver mais</span>
+    </button>
+  </div> -->
